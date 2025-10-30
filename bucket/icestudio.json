@@ -1,0 +1,34 @@
+{
+    "version": "0.12",
+    "description": "Visual editor for open FPGA boards",
+    "homepage": "https://icestudio.io/",
+    "license": "GPL-2.0-only",
+    "suggest": {
+        "python": "main/python"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/FPGAwars/icestudio/releases/download/v0.12/icestudio-0.12-win64.zip",
+            "hash": "053eaaf0c8e396ac00fe05e5b43ce795dffc6d84a7d8af899cc317ccaae2169e"
+        }
+    },
+	"extract_dir": "icestudio-0.12-win64",
+    "bin": "icestudio.exe",
+    "shortcuts": [
+        [
+            "icestudio.exe",
+            "Icestudio"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/FPGAwars/icestudio"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/FPGAwars/icestudio/releases/download/v$version/icestudio-$version-win64.zip"
+            }
+        },
+		"extract_dir": "icestudio-$version-win64"
+    }
+}
